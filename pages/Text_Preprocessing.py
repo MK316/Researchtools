@@ -29,7 +29,7 @@ with tabs[0]:
         st.write(f"**Passage Count:** {len([p for p in passages if p.strip()])}")
 
         # Stop words input
-        stopwords_input = st.text_input("Enter stopwords to exclude (comma-separated):", "")
+        stopwords_input = st.text_input("(Optional) Enter words to exclude in the list (comma-separated):", "")
 
         col1, col2 = st.columns(2)
 
@@ -68,7 +68,7 @@ with tabs[0]:
                 )
 
     else:
-        st.info("Please enter some text to begin analysis.")
+        st.info("Please enter your text to begin analysis.")
 
 # Styling for buttons (optional; not necessary for default Streamlit buttons)
 st.markdown("""
