@@ -21,12 +21,14 @@ with tabs[0]:
         # Summary
         words = re.findall(r'\b\w+\b', text_input)
         sentences = re.split(r'[.!?]+', text_input)
-        passages = text_input.strip().split("\n\n")
+        passages = [p.strip() for p in re.split(r'\n\s*\n', text_input.strip()) if p.strip()]
+
 
         st.markdown("### 🔍 Text Summary")
         st.write(f"**Word Count:** {len(words)}")
         st.write(f"**Sentence Count:** {len([s for s in sentences if s.strip()])}")
-        st.write(f"**Passage Count:** {len([p for p in passages if p.strip()])}")
+        st.write(f"**Passage Count:** {len(passages)}")
+
 
         # Stop words input
         stopwords_input = st.text_input("(Optional) Enter words to exclude in the list (comma-separated):", "")
