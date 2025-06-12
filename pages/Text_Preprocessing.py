@@ -14,10 +14,10 @@ tabs = st.tabs(["Text Summary", "Tab2", "Tab3", "Tab4", "Tab5"])
 with tabs[0]:
     st.header("📝 Text Analysis: Summary and Tools")
     st.markdown("Provide your text below to get summary information and use analysis tools.")
-
     text_input = st.text_area("Enter your text here:", height=300)
+    submit = st.button("✅ Submit", key="submit_text")
 
-    if text_input.strip():
+    if submit and text_input.strip():
         # Summary
         words = re.findall(r'\b\w+\b', text_input)
         sentences = re.split(r'[.!?]+', text_input)
