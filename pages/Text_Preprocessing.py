@@ -21,7 +21,8 @@ with tabs[0]:
         # Summary
         words = re.findall(r'\b\w+\b', text_input)
         sentences = re.split(r'[.!?]+', text_input)
-        passages = [p.strip() for p in re.split(r'\n\s*\n', text_input.strip()) if p.strip()]
+        passages = [p.strip() for p in re.split(r'\n+', text_input.strip()) if p.strip()]
+
 
 
         st.markdown("### 🔍 Text Summary")
