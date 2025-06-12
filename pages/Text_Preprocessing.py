@@ -73,17 +73,16 @@ with tabs[0]:
     else:
         st.info("Please enter your text to begin analysis.")
 
-# Styling for buttons (optional; not necessary for default Streamlit buttons)
 st.markdown("""
     <style>
         div.stButton > button:first-child {
-            background-color: #1f77b4;
-            color: white;
+            background-color: #FFD700 !important;  /* Yellow */
+            color: black !important;
             font-weight: bold;
         }
-        div.stButton > button:nth-child(2) {
-            background-color: #ff7f0e;
-            color: white;
+        div.stButton > button:not(:first-child) {
+            background-color: #1f77b4 !important;  /* Blue */
+            color: white !important;
             font-weight: bold;
         }
     </style>
