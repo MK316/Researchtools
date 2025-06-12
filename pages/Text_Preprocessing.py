@@ -15,7 +15,7 @@ with tabs[0]:
     st.header("📝 Text Analysis: Summary and Tools")
     st.markdown("Provide your text below to get summary information and use analysis tools.")
     text_input = st.text_area("Enter your text here:", height=300)
-    submit = st.button("✅ Submit", key="submit_text")
+    submit = st.button("🎯 Submit", key="submit_text")
 
     if submit and text_input.strip():
         # Summary
