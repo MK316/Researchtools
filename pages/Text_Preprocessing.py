@@ -35,7 +35,7 @@ with tabs[0]:
 
         # Button 1: Word Frequency
         with col1:
-            if st.button("📘 Show Word Frequency", key="freq_btn"):
+            if st.button("🟠 Make a Word List by Frequency", key="freq_btn"):
                 stopwords = [w.strip().lower() for w in stopwords_input.split(",") if w.strip()]
                 word_list = re.findall(r'\b\w+\b', text_input)
                 filtered_words = []
@@ -54,7 +54,7 @@ with tabs[0]:
 
         # Button 2: Sentence View + CSV Download
         with col2:
-            if st.button("🟠 Arrange by Sentences", key="sent_btn"):
+            if st.button("🟠 Make a Sentence List", key="sent_btn"):
                 sent_list = re.split(r'(?<=[.!?])\s+', text_input.strip())
                 df_sent = pd.DataFrame({"Sentence": [s.strip() for s in sent_list if s.strip()]})
                 st.dataframe(df_sent)
